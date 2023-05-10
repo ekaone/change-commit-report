@@ -1,0 +1,15 @@
+name: Change Commit Report
+description: GitHub Action to generate a report from the recent code commit changes and post it to Slack
+author: Eka Prasetia
+inputs:
+  days: # change this
+    required: true
+    description: 'number of days to include into the report'
+    default: 7
+  channel:
+    required: true
+    description: 'channel to report'
+    default: 'general'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
